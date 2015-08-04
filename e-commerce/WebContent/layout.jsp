@@ -2,15 +2,12 @@
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Tool Shop</title>
-<link rel="stylesheet" type="text/css" href="style.css" />
-<!--[if IE 6]>
-<link rel="stylesheet" type="text/css" href="iecss.css" />
-<![endif]-->
-<script type="text/javascript" src="js/boxOver.js" />
-</head>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Tool Shop</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="js/boxOver.js"></script>
+	</head>
 <body>
 	<div id="main_container">
 		<div id="header">
@@ -271,8 +268,9 @@
 				<div class="shopping_cart">
 					<div class="title_box">Shopping cart</div>
 					<div class="cart_details">
-						3 items <br /> <span class="border_cart" /> Total: <span
-							class="price">350$</span>
+							3 items <br /> 
+							<span class="border_cart">Total:</span> 
+							<span class="price">350$</span>
 					</div>
 					<div class="cart_icon">
 						<a href="#"><img src="images/shoppingcart.png" alt=""
