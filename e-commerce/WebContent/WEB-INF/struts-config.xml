@@ -16,14 +16,24 @@
 			name="helloWorldStrutsForm">
 			<forward name="success" path="/helloWorld.jsp" />
 		</action>
+		
+		<action path="/tilesExample"
+			type="com.ecommerce.app.struts.configuration.initial.TilesExampleAction"
+			name="helloWorldStrutsForm">
+			<forward name="goToLayout" path="layout" />
+		</action>
 
+		<!-- Guardo esta como ejemplo de Forward Action
 		<action path="/tiles" type="org.apache.struts.actions.ForwardAction"
-			parameter="/tiles/pages/layout.jsp" />
+			parameter="/pages/tiles/layout.jsp" /> -->
 
 	</action-mappings>
+	
+	<controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
 
-	<plug-in className="org.apache.struts.tiles.TilesPlugin">
-		<set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
-	</plug-in>
+	<plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
 
 </struts-config>
