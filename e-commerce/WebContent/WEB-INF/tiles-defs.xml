@@ -6,8 +6,11 @@
 
 <tiles-definitions>
 
-	<definition name="layout" path="/WEB-INF/pages/tiles/layout.jsp">
-		<put name="header" value="/WEB-INF/pages/tiles/header.jsp" />
+	<definition name="layout" path="/pages/tiles/layout.jsp">
+		<put name="header" value="/pages/tiles/header.jsp" />
+		<put name="center_content" value="/pages/tiles/center_content.jsp" />
+		<put name="left_content" value="/pages/tiles/left_content.jsp" />
+		<put name="right_content" value="/pages/tiles/right_content.jsp" />
 	</definition>
 
 </tiles-definitions>
