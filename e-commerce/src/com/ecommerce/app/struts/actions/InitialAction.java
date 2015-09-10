@@ -1,4 +1,4 @@
-package com.ecommerce.app.struts.configuration.initial;
+package com.ecommerce.app.struts.actions;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -9,17 +9,17 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
-public class HelloWorldAction extends Action {
+import com.ecommerce.app.constants.Forwards;
+
+public class InitialAction extends Action implements Forwards {
 	
-	private static Logger log = Logger.getLogger(HelloWorldAction.class);
+	private static Logger log = Logger.getLogger(InitialAction.class);
 	
 	public ActionForward execute(ActionMapping mapping, ActionForm form, 
 			HttpServletRequest request, HttpServletResponse response)
 	{
-		HelloWorldStrutsForm helloWorldStrutsForm = (HelloWorldStrutsForm) form;
-		helloWorldStrutsForm.setMessage("Hello world!!");
 		log.trace("traza de log de prueba");
-		return mapping.findForward("success");
+		return mapping.findForward(SUCCESS);
 	}
 
 }

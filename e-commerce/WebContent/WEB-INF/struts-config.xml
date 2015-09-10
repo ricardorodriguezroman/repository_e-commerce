@@ -5,27 +5,16 @@
 <struts-config>
 
 	<form-beans>
-		<form-bean name="helloWorldStrutsForm"
-			type="com.ecommerce.app.struts.configuration.initial.HelloWorldStrutsForm" />
+	
+		<form-bean name="InitialForm" type="com.ecommerce.app.struts.forms.InitialForm" />
+	
 	</form-beans>
 
 	<action-mappings>
-
-		<action path="/helloWorld"
-			type="com.ecommerce.app.struts.configuration.initial.HelloWorldAction"
-			name="helloWorldStrutsForm">
-			<forward name="success" path="/helloWorld.jsp" />
-		</action>
 		
-		<action path="/tilesExample"
-			type="com.ecommerce.app.struts.configuration.initial.TilesExampleAction"
-			name="helloWorldStrutsForm">
-			<forward name="goToLayout" path="layout" />
+		<action path="/initial" type="com.ecommerce.app.struts.actions.InitialAction" name="helloWorldStrutsForm">
+			<forward name="success" path="initial" />
 		</action>
-
-		<!-- Guardo esta como ejemplo de Forward Action
-		<action path="/tiles" type="org.apache.struts.actions.ForwardAction"
-			parameter="/pages/tiles/layout.jsp" /> -->
 
 	</action-mappings>
 	

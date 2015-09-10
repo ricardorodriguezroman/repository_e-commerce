@@ -10,9 +10,13 @@
 <script type="text/javascript" src="js/boxOver.js"></script>
 </head>
 <body>
+	<!-- CONTENEDOR PRINCIPAL -->
 	<div id="main_container">
+		<!-- CABECERA -->
 		<tiles:insert attribute="header"/>
+		<!-- CONTENIDO PRINCIPAL -->
 		<div id="main_content">
+			<!-- MENU -->
 			<div id="menu_tab">
 				<ul class="menu">
 					<li><a href="#" class="nav"> Home </a></li>
@@ -23,7 +27,7 @@
 					<li class="divider"><br /></li>
 					<li><a href="#" class="nav">My account</a></li>
 					<li class="divider"><br /></li>
-					<li><a href="#" class="nav">Sign Up</a></li>
+					<li><a href="/contact.do" class="nav">Sign Up</a></li>
 					<li class="divider"><br /></li>
 					<li><a href="#" class="nav">Shipping </a></li>
 					<li class="divider"><br /></li>
@@ -32,33 +36,19 @@
 					<li><a href="details.html" class="nav">Details</a></li>
 				</ul>
 			</div>
-			<!-- end of menu tab -->
 			<div class="crumb_navigation">
 				Navigation: <span class="current">Home</span>
 			</div>
+			<!-- CONTENIDO IZQUIERDO -->
 			<tiles:insert attribute="left_content" />
+			<!-- CONTENIDO CENTRAL -->
 			<tiles:insert attribute="center_content"/>
+			<!-- CONTENIDO DERECHO -->
 			<tiles:insert attribute="right_content" />
-			<!-- end of right content -->
 		</div>
-		<!-- end of main content -->
-		<div class="footer">
-			<div class="left_footer">
-				<img src="images/footer_logo.png" alt="" height="42" width="89" />
-			</div>
-			<div class="center_footer">
-				Template name. All Rights Reserved 2008<br /> <a
-					href="http://csscreme.com"><img src="images/csscreme.jpg"
-					alt="csscreme" title="csscreme" border="0" /></a><br /> <img
-					src="images/payment.gif" alt="" />
-			</div>
-			<div class="right_footer">
-				<a href="#">home</a> <a href="#">about</a> <a href="#">sitemap</a> <a
-					href="#">rss</a> <a href="#">contact us</a>
-			</div>
-		</div>
+		<!-- PIE -->
+		<tiles:insert attribute="footer" />
 	</div>
-	<!-- end of main_container -->
 </body>
 </html>
 
