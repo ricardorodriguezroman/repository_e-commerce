@@ -7,19 +7,28 @@
 <tiles-definitions>
 
 	<definition name="layout" path="/pages/tiles/layout.jsp">
-		
 		<put name="header" 			value="/pages/tiles/header.jsp" />
-		<put name="center_content" value="/pages/tiles/empty.jsp" />
+		<put name="menu" 				value="/pages/tiles/menu.jsp" />
 		<put name="left_content" 		value="/pages/tiles/left_content.jsp" />
 		<put name="right_content" 	value="/pages/tiles/right_content.jsp" />
+		<put name="center_content" value="/pages/tiles/empty.jsp" />
 		<put name="footer" 				value="/pages/tiles/footer.jsp" />
-		
 	</definition>
 	
 	<definition name="initial" extends="layout">
-		
 		<put name="center_content" value="/pages/tiles/module_user/initial.jsp" />
-		
+	</definition>
+	
+	<definition name="contact" extends="layout">
+		<put name="center_content" value="/pages/tiles/module_user/contact.jsp" />
+	</definition>
+	
+	<definition name="login" extends="layout">
+		<put name="center_content" value="/pages/tiles/module_user/login.jsp" />
+	</definition>
+	
+	<definition name="home" extends="layout">
+		<put name="center_content" value="/pages/tiles/module_user/home.jsp" />
 	</definition>
 
 </tiles-definitions>

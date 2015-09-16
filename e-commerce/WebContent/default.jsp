@@ -5,9 +5,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
-<title>Insert title here</title>
+<title>Tools Shop</title>
 </head>
 <body>
-	<logic:redirect action="/initial" />
+	<logic:redirect action="/page_initial.do" />
 </body>
 </html>

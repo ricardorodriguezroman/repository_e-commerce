@@ -11,9 +11,9 @@ import org.apache.struts.action.ActionMapping;
 
 import com.ecommerce.app.constants.Forwards;
 
-public class InitialAction extends Action implements Forwards {
+public class LoginAction extends Action implements Forwards {
 	
-	private static Logger log = Logger.getLogger(InitialAction.class);
+	private static Logger log = Logger.getLogger(LoginAction.class);
 	
 	public ActionForward execute(ActionMapping mapping, ActionForm form, 
 			HttpServletRequest request, HttpServletResponse response)
