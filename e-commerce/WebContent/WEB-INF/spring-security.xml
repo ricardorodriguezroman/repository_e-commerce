@@ -1,28 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
 
-<beans:beans xmlns="http://www.springframework.org/schema/security"
-xmlns:beans="http://www.springframework.org/schema/beans"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://www.springframework.org/schema/beans
-http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
-http://www.springframework.org/schema/security
-http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+<beans:beans 	xmlns="http://www.springframework.org/schema/security"
+						xmlns:beans="http://www.springframework.org/schema/beans" 
+						xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+						xsi:schemaLocation="http://www.springframework.org/schema/beans
+							http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+							http://www.springframework.org/schema/security
+							http://www.springframework.org/schema/security/spring-security-3.2.xsd">
 
-<http auto-config="true">
-	<intercept-url pattern="/admin**" access="ROLE_USER" />
-	<form-login login-page="/login" default-target-url="/welcome"
-		authentication-failure-url="/login?error" username-parameter="username"
-		password-parameter="password" />
-	<logout logout-success-url="/login?logout" />
-	<!-- enable csrf protection -->
-	<csrf />
-</http>
+	<http realm="Project Realm" auto-config="true">
+		
+		<intercept-url pattern="/page_initial"				access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/module_admin" 		access="ROLE_ADMIN" />
+		<intercept-url pattern="/page_myAccount*"	access="ROLE_USER" />
+		
+		<form-login login-page="/page_login.do" authentication-failure-url="/page_login.do?login_error=1"/>
+        
+        <logout logout-success-url="/page_initial.do" />
+		
+		<remember-me />
+		
+		<!-- TODO: Buscar información sobre CSRF protección, de momento comentado:  -->
+		<!-- <csrf />  -->
+		
+	</http>
 
-<authentication-manager>
-	<authentication-provider>
-		<user-service>
-			<user name="mkyong" password="123456" authorities="ROLE_USER" />
-		</user-service>
-	</authentication-provider>
-</authentication-manager>
+	<authentication-manager>
+	
+		<authentication-provider>
+		
+			<!-- TODO: Codificar la password. ¿Aquí? ¿En BD? de momento, comentado password encoder -->
+			<!-- <password-encoder hash="md5"/>  -->
+        		
+        		<user-service>
+                  <user name="admin " 	password="admin" 	authorities="ROLE_ADMIN " />
+                  <user name="user" 		password="user" 		authorities="ROLE_USER" />
+			</user-service>
+		
+		</authentication-provider>
+	
+	</authentication-manager>
 
 </beans:beans>

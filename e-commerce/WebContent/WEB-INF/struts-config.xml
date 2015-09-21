@@ -13,14 +13,14 @@
 		<!-- <action path="/login" type="com.ecommerce.app.struts.actions.LoginAction" 
 			name="LoginForm"> <forward name="success" path="initial" /> </action> -->
 
-		<action path=”/welcome” type=”org.springframework.web.struts.DelegatingActionProxy”>
-			<forward name=”success” path=”/pages/welcome.jsp” />
+		<action path="/page_myAccount" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="success" path="myAccount" />
 		</action>
 
-		<action path="/page_initial" type="org.apache.struts.actions.ForwardAction" parameter="initial" />
-		<action path="/page_contact" type="org.apache.struts.actions.ForwardAction" parameter="contact" />
-		<action path="/page_login" type="org.apache.struts.actions.ForwardAction" parameter="login" />
-		<action path="/page_home" type="org.apache.struts.actions.ForwardAction" parameter="home" />
+		<action path="/page_initial" 		type="org.apache.struts.actions.ForwardAction" parameter="initial" />
+		<action path="/page_contact" 	type="org.apache.struts.actions.ForwardAction" parameter="contact" />
+		<action path="/page_login" 		type="org.apache.struts.actions.ForwardAction" parameter="login" />
+		<action path="/page_home" 		type="org.apache.struts.actions.ForwardAction" parameter="home" />
 
 	</action-mappings>
 
@@ -31,8 +31,8 @@
 		<set-property property="moduleAware" value="true" />
 	</plug-in>
 	
-	<plug-in className=”org.springframework.web.struts.ContextLoaderPlugIn”>
-             <set-property property=”contextConfigLocation” value=”/WEB-INF/action-servlet.xml”/>
+	<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+             <set-property property="contextConfigLocation" value="/WEB-INF/action-servlet.xml"/>
     </plug-in>
 
 </struts-config>

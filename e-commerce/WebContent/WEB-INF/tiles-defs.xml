@@ -27,8 +27,8 @@
 		<put name="center_content" value="/pages/tiles/module_user/login.jsp" />
 	</definition>
 	
-	<definition name="home" extends="layout">
-		<put name="center_content" value="/pages/tiles/module_user/home.jsp" />
+	<definition name="myAccount" extends="layout">
+		<put name="center_content" value="/pages/tiles/module_user/myAccount.jsp" />
 	</definition>
 
 </tiles-definitions>
